@@ -1,0 +1,13 @@
+1. Xây dựng lại hệ thống FM gồm những màn hình sau :
+- Màn hình Login
+- Màn hình Account
+Như hình ở link dưới :
+https://drive.google.com/file/d/1oUFFZrYTu-jDZchJnPCe1hQo981z4hYB/view?usp=sharing
+
+Môi trường dev: http://fmplusdev.xyz
+
+Yêu cầu:
+- Chức năng login, logout
+- Hiển thị đầy đủ thông tin ở màn Account (Tên, số điện thoại, avatar , ...)
+
+Note: Nếu đã login rồi lần sau vào lại không cần login nữa.

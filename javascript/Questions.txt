@@ -1,0 +1,24 @@
+<--------------------------- Lý thuyết ---------------------------->
+Question 1:
+    - Trình bày sự khác biệt giữa ES5 và ES6 ?
+    - Sự khác biệt giữa var và let, const là gì?
+    - Lấy ví dụ minh hoạ ?
+Question 2:
+    - Khởi tạo đối tượng có từ khóa new và không có từ khóa new khác gì nhau ?
+Question 3:
+    - Destructuring javascript là gì?
+    - Spread operator là gì?
+    - Rest Parameters là gì?
+    (Lấy ví dụ minh hoạ cho 3 ý trên)
+Question 4:
+    - Phân biệt map() và foreach() trong javascript ?
+    - Phân biệt find() vs filter trong javascript ?
+
+
+<--------------------------- Thực hành ---------------------------->
+
+Bài 1: Cho một mảng số nguyên gồm n phần tử. Sắp xếp mảng theo số lần xuất hiện của các phần tử.
+Ví dụ:
+Input: arr[] = {2, 5, 2, 8, 5, 6, 8, 8}
+Output: result = {6, 2, 5, 8}
+Bài 2: In ra mảng các kí tự theo thứ tự bảng chữ cái ["A", ..., "Z"] (Tốc độ deplay: 1s)
