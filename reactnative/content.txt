@@ -10,4 +10,7 @@ Yêu cầu:
 - Chức năng login, logout
 - Hiển thị đầy đủ thông tin ở màn Account (Tên, số điện thoại, avatar , ...)
 
-Note: Nếu đã login rồi lần sau vào lại không cần login nữa.
+Note:
+- Nếu đã login rồi lần sau vào lại không cần login nữa.
+- Clone lại UI từ project FM cho nhanh cũng dc. Đánh giá vào xử lý logic và hiểu luồng là chính
+- Nên khởi tạo từ ban đầu. Chỉ dùng các thư viện cần thiết để hiểu rõ bản chất
