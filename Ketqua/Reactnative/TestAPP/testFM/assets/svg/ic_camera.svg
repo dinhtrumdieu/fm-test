@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="change_avt" data-name="change avt" transform="translate(0.437 -0.238)">
+    <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(-0.437 0.238)" fill="#fff" stroke="#a9a9a9" stroke-linecap="round" stroke-width="0.25">
+      <rect width="25" height="25" rx="12" stroke="none"/>
+      <rect x="0.125" y="0.125" width="24.75" height="24.75" rx="11.875" fill="none"/>
+    </g>
+    <g id="Icon_ionic-ios-camera" data-name="Icon ionic-ios-camera" transform="translate(6.401 8.491)">
+      <path id="Path_3" data-name="Path 3" d="M17.349,16.989a1.7,1.7,0,1,1-1.7-1.7A1.7,1.7,0,0,1,17.349,16.989Z" transform="translate(-9.99 -12.182)" fill="#707070"/>
+      <path id="Path_4" data-name="Path 4" d="M14.925,9.291H13.318a.479.479,0,0,1-.354-.159c-.838-.938-1.153-1.256-1.5-1.256H8.947c-.345,0-.684.319-1.525,1.259a.469.469,0,0,1-.351.156H6.951V9.055a.237.237,0,0,0-.236-.236H5.948a.237.237,0,0,0-.236.236v.236H5.491A.956.956,0,0,0,4.5,10.2v5.19a1.021,1.021,0,0,0,.988.982h9.437a.945.945,0,0,0,.9-.982V10.2A.879.879,0,0,0,14.925,9.291ZM10.28,15.2a2.521,2.521,0,1,1,2.4-2.4A2.524,2.524,0,0,1,10.28,15.2ZM12.993,11a.383.383,0,1,1,.383-.383A.383.383,0,0,1,12.993,11Z" transform="translate(-4.5 -7.875)" fill="#707070"/>
+    </g>
+  </g>
+</svg>
