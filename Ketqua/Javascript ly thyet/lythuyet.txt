@@ -1,0 +1,168 @@
+Question 1:
+-Sự khác biệt giữa ES5 và ES6
+   *ES5:
+	- ES5 là phiên bản thứ năm cửa ECMAScript, nó được giới thiệu vào năm 2009
+	- Viết trực tiếp và chạy không cần biên dịch
+	- Sử dụng lập trình hàm để thực hiện viết code
+   *ES6:-ES6 là phiên bản thứ sáu của ECMAScript, nó được ra mặt vào 2015
+	-Cần biên dịch để chạy
+	-Tương tự ES5 tuy nhiên đưa vào một số khái niệm mới
+	-Bổ sung kiểu khai báo biến mới let, const
+-Sự khác biệt giữa var, let, const
+   I.Biến được khai báo bằng từ khoá var:
+	1/Phạm vi hàm (function scope) hoặc phạm vi toàn cục (global scope)
+	ví dụ:
+		var language = "JavaScript";
+
+		function test() {
+   		 var language = "HungNHT";
+    		framework = "React";
+    		console.log(language);
+		}
+ 
+		test(); // "HungNHT"
+		console.log(language); // "JavaScript"
+		console.log(window.language); // "JavaScript"
+		console.log(window.framework); // "React"
+	2/Có thể gán lại (Re-assignable) và có thể khai báo lại (Re-declarable)
+	ví dụ:
+		var language = "JavaScript";
+		var language = "Python"; // Khai báo lại biến
+		console.log(language); // "Python"
+		language = "Java"; // Gán lại biến
+		console.log(language); // "Java"
+   II.Biến được khai báo bằng từ khoá let:
+	1/Khi được khai báo bên trong một khối { }, biến sử dụng từ khóa let có phạm vi khối (Block scope) đó. Tương tự như vậy, khi được khai báo bên trong hàm, biến có phạm vi hàm.
+	ví dụ: {
+   		 let language = "React"; // Phạm vi khối
+    		console.log(language); // "React"
+		}
+		console.log(window.language); // undefined
+		console.log(language); //
+	2/Không thể khai báo lại bất kỳ biến nào đã được khai báo với từ khóa let
+		ví dụ:	let language = "JavaScript";
+			let language = "Java"; // Lỗi 
+	Nhưng có thể gán lại biến:
+		ví dụ:	let language = "JavaScript";
+			language = "Python";
+			console.log(language); // "Python"
+	3/Không thể sử dụng biến được khai báo bằng từ khóa let trước khai báo chúng.
+		ví dụ:
+		console.log(language); // Lỗi
+		let language;
+    III.Biến được khai báo bằng từ khoá let:
+	1/Khi được khai báo bên trong một khối { }, biến sử dụng từ khóa let có phạm vi khối (Block scope) đó.
+		Ví dụ:
+			const language = "JavaScript";
+			{
+  			  const language = "React"; // Phạm vi khối
+  			  console.log(language); // "React"
+			}
+			function foo() {
+    			const language = "Python";
+   			 console.log(language);
+			}
+			foo(); // "Python"
+			console.log(language); // "JavaScript"
+			console.log(window.language); // undefined
+	2/Bất kỳ biến nào được khai báo với từ khóa const đều không thể được khai báo lại và cũng không thể được gán lại.
+Question 2:Khởi tạo đối tượng có từ khóa new và không có từ khóa new
+	1.Khởi tạo đối tượng có từ khoá new: Tạo ra nhiều đối tượng 1 cách nhanh chóng thay vì phải tạo ra nhiều hàm có cấu trúc giống nhau(có tính kế thừa)
+	Ví dụ:	function Person(name) {
+   		 console.log("Tôi là " + name);
+		}
+		let person1 = new Person("Hưng"); // Tôi là Hưng
+		let person2 = new Person("Sơn"); // Tôi là Sơn
+	2.Không dùng new:Ta phải tạo ra 2 hàm Person()
+		function Person() {
+   		 console.log("Tôi là Hưng");
+		}
+		Person(); // Tôi là Hưng
+		/*---------------------------*/
+		function Person() {
+    		console.log("Tôi là Sơn");
+		}
+		Person(); // Tôi là Sơn
+Question 3:
+-Destructuring là một biểu thức dùng để lấy ra giá trị của một hay nhiều phần tử trong mảng hoặc object, đồng thời gán giá trọ này cho các biến trước đó.
+VÍ dụ: 
+	const [a, b, c] = [1, 2, 3, 4, 5]
+	console.log(a, b, c); // 1, 2, 3
+	const [a, b, ...c] = [1, 2, 3, 4, 5]
+	console.log(a, b, c) ; //1, 2, [3, 4, 5]
+-Spread operator là cách sử dụng dấu ba chấm (...) có nhiều chức năng giúp code ngắn gọn và dễ nhìn hơn:
+	+Sao chép một mảng
+		vd: const trai = ['oi', 'xoai', 'quyt']
+		    const nhieuTrai = [...trai]
+		console.log(nhieuTrai) // ['oi', 'xoai', 'quyt']
+	+Sử dụng mảng như danh sách các tham số
+		vd:
+		const numbers = [37, -17, 7, 0]
+		console.log(Math.min(numbers)) // output là NaN do hàm này không nhận array là tham số
+		//Sử dụng spread operator
+		console.log(Math.min(...numbers)) // output: -17 
+		console.log(Math.max(...numbers)) // 37
+	+Thêm phần tử vào mảng
+		vd:
+		const fewFruit = ['oi', 'xoai', 'quyt']
+		const fewMoreFruit = ['cam', 'le', ...fewFruit] //thêm các phần tử của mảng fewFruit vào mảng fewMoreFruit
+		console.log(fewMoreFruit)//['cam', 'le','oi', 'xoai', 'quyt']
+	+Thao tác với state trong React
+		function App() {
+  		// Khai báo React Hook
+  		const [searches, setSearches] = useState([])
+  		const [query, setQuery] = useState("")
+
+  		const handleClick = () => {
+     
+    		// Thêm một phần tử vào trong state searches của React Hook
+    		setSearches(searches => [...searches, query])
+ 		 }
+-Rest Parameters là tham số còn lại, chúng ta có thể khai báo một hàm với số lượng tham số không xác định
+	Vd:
+		// Khai báo hàm
+		let domainList = (main, sub, ...other) =>
+		{
+    		console.log("Main: " + main);
+    		console.log("Sub: " + sub);
+    		console.log("Other");
+    		console.log(other);
+		}
+		// Gọi hàm
+		domainList('a', 'b', 'c', 'd', 'e');
+		console.log(domainList)// Main:a
+					Sub:b
+					Other: ['c','d','e']
+Question 4:
+    - Phân biệt map() và foreach() trong javascript ?=>cả 2 đều thực hiện hàm callback lên từng phẩn tử ở trong mảng
+	+Map(): -có trả về giá trị
+		-tạo ra một mảng mới có cùng số phần tử với mảng cũ và trả về mảng mới này
+		-Nếu muốn thay đổi dữ liệu ra 1 mảng mới với tốc độ tốt hơn thì dùng map
+	+Foreach(): -không trả về giá trị nào cả
+		    -hàm callback có thể thay đổi trực tiếp mảng ban đầu
+		    -Nếu không muốn thay đổi dữ liệu trong mảng nhưng thay vào đó chỉ muốn làm gì đó với nó - như lưu nó vào cơ sở dữ liệu hoặc log ra màn hình thì dùng forEach
+    - Phân biệt find() vs filter trong javascript ?
+̣	-Phương thức  find () trả về giá trị đầu tiên phù hợp với bộ sưu tập. Khi nó khớp với giá trị trong kết quả, nó sẽ không kiểm tra các giá trị còn lại trong bộ sưu tập mảng.
+	-Phương thức  filter () trả về các giá trị phù hợp trong một mảng từ bộ sưu tập. Nó sẽ kiểm tra tất cả các giá trị trong bộ sưu tập và trả về các giá trị phù hợp trong một mảng.
+Ví dụ: 
+	var requests = [{  
+   	 App: 'Adobe',  
+    	Count: 10  
+	}, {  
+    	App: 'Apple',  
+    	Count: 12  
+	}, {  
+    	App: 'Amazon',  
+    	Count: 5  
+	}, {  
+    	App: 'Microsoft',  
+    	Count: 2  
+	}];  
+	*Find:   requests.find(function(item) {  
+   		return item.App == "Apple"  
+		});  
+		//output: {App: "Apple", Count: 12}  
+	*Filter: requests.filter(function(item) {  
+    		 return item.App == "Apple"  
+		 })[0];  
+		 //output: {App: "Apple", Count: 12}  
